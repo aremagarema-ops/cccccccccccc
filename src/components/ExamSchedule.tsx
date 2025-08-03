@@ -21,7 +21,6 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({ isDarkMode = false }
 
   // حساب التواريخ بناءً على الجمعة القادمة
   const getNextFriday = () => {
-    const today = new Date();
     // تحديد تاريخ الجمعة الأولى للمسابقة
     const nextFriday = new Date('2025-02-14T13:30:00'); // Friday, February 14, 2025 after Jumu'ah prayer
     return nextFriday;

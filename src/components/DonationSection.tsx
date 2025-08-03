@@ -48,11 +48,27 @@ export const DonationSection: React.FC<DonationSectionProps> = ({ isDarkMode = f
                     ? 'bg-gray-800/50 border-red-600/30' 
                     : 'bg-white/70 border-red-200'
                 }`}>
-                  <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="flex items-center justify-center gap-2 mb-3">
                     <Phone className="w-5 h-5 text-red-600" />
                     <span className={`text-2xl font-bold ${isDarkMode ? 'text-red-200' : 'text-red-800'}`}>
                       01066094984
                     </span>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText('01066094984');
+                        const button = event?.target as HTMLButtonElement;
+                        const originalText = button.textContent;
+                        button.textContent = 'تم النسخ!';
+                        button.style.backgroundColor = '#10B981';
+                        setTimeout(() => {
+                          button.textContent = originalText;
+                          button.style.backgroundColor = '';
+                        }, 2000);
+                      }}
+                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold transition-colors duration-200"
+                    >
+                      نسخ
+                    </button>
                   </div>
                   <p className={`text-sm ${isDarkMode ? 'text-red-300' : 'text-red-700'}`}>
                     رقم المحفظة الإلكترونية
@@ -86,11 +102,27 @@ export const DonationSection: React.FC<DonationSectionProps> = ({ isDarkMode = f
                     ? 'bg-gray-800/50 border-blue-600/30' 
                     : 'bg-white/70 border-blue-200'
                 }`}>
-                  <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="flex items-center justify-center gap-2 mb-3">
                     <Phone className="w-5 h-5 text-blue-600" />
                     <span className={`text-2xl font-bold ${isDarkMode ? 'text-blue-200' : 'text-blue-800'}`}>
                       01276099675
                     </span>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText('01276099675');
+                        const button = event?.target as HTMLButtonElement;
+                        const originalText = button.textContent;
+                        button.textContent = 'تم النسخ!';
+                        button.style.backgroundColor = '#10B981';
+                        setTimeout(() => {
+                          button.textContent = originalText;
+                          button.style.backgroundColor = '';
+                        }, 2000);
+                      }}
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold transition-colors duration-200"
+                    >
+                      نسخ
+                    </button>
                   </div>
                   <p className={`text-sm ${isDarkMode ? 'text-blue-300' : 'text-blue-700'}`}>
                     رقم انستاباي
