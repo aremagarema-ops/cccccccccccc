@@ -21,8 +21,8 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({ isDarkMode = false }
 
   // حساب التواريخ بناءً على الجمعة القادمة
   const getNextFriday = () => {
-    // تحديد تاريخ الجمعة الأولى للمسابقة
-    const nextFriday = new Date('2025-02-14T13:30:00'); // Friday, February 14, 2025 after Jumu'ah prayer
+    // تحديد تاريخ الجمعة الأولى للمسابقة - 14 أغسطس 2025
+    const nextFriday = new Date('2025-08-14T13:30:00'); // Thursday, August 14, 2025 after Jumu'ah prayer
     return nextFriday;
   };
 
@@ -33,18 +33,18 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({ isDarkMode = false }
     
     // التواريخ الهجرية المحددة مسبقاً
     const hijriDates = [
-      'الجمعة، ١٦ رجب ١٤٤٦ هـ',
-      'السبت، ١٧ رجب ١٤٤٦ هـ', 
-      'الجمعة، ٢٣ رجب ١٤٤٦ هـ',
-      'السبت، ٢٤ رجب ١٤٤٦ هـ'
+      'الخميس، ١٩ صفر ١٤٤٧ هـ',
+      'الجمعة، ٢٠ صفر ١٤٤٧ هـ', 
+      'الخميس، ٢٦ صفر ١٤٤٧ هـ',
+      'الجمعة، ٢٧ صفر ١٤٤٧ هـ'
     ];
     
     // التواريخ الميلادية المقابلة
     const gregorianDates = [
-      'الجمعة، ١٤ فبراير ٢٠٢٥ م',
-      'السبت، ١٥ فبراير ٢٠٢٥ م',
-      'الجمعة، ٢١ فبراير ٢٠٢٥ م', 
-      'السبت، ٢٢ فبراير ٢٠٢٥ م'
+      'الخميس، ١٤ أغسطس ٢٠٢٥ م',
+      'الجمعة، ١٥ أغسطس ٢٠٢٥ م',
+      'الخميس، ٢١ أغسطس ٢٠٢٥ م', 
+      'الجمعة، ٢٢ أغسطس ٢٠٢٥ م'
     ];
     
     return {
@@ -59,7 +59,7 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({ isDarkMode = false }
     {
       id: 1,
       date: nextFriday,
-      day: 'الجمعة',
+      day: 'الخميس',
       title: 'اختبار حفظ ثلاثة أجزاء',
       description: 'اختبار تسميع للطلاب الذين حفظوا ثلاثة أجزاء من القرآن الكريم',
       parts: ['ثلاثة أجزاء'],
@@ -68,8 +68,8 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({ isDarkMode = false }
     },
     {
       id: 2,
-      date: new Date('2025-02-15T12:00:00'), // Saturday, 12:00 PM
-      day: 'السبت',
+      date: new Date('2025-08-15T12:00:00'), // Friday, 12:00 PM
+      day: 'الجمعة',
       title: 'اختبار الجزء الخامس والثامن',
       description: 'اختبارات حفظ للجزء الخامس والجزء الثامن من القرآن الكريم',
       parts: ['الجزء الخامس', 'الجزء الثامن'],
@@ -78,8 +78,8 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({ isDarkMode = false }
     },
     {
       id: 3,
-      date: new Date('2025-02-21T13:30:00'), // Friday after Jumu'ah prayer
-      day: 'الجمعة',
+      date: new Date('2025-08-21T13:30:00'), // Thursday after Jumu'ah prayer
+      day: 'الخميس',
       title: 'اختبار الأجزاء المتقدمة',
       description: 'اختبارات للجزء العاشر والخامس عشر والعشرون',
       parts: ['الجزء العاشر', 'الجزء الخامس عشر', 'الجزء العشرون'],
@@ -88,8 +88,8 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({ isDarkMode = false }
     },
     {
       id: 4,
-      date: new Date('2025-02-22T12:00:00'), // Saturday, 12:00 PM
-      day: 'السبت',
+      date: new Date('2025-08-22T12:00:00'), // Friday, 12:00 PM
+      day: 'الجمعة',
       title: 'اختبار الأجزاء الأخيرة',
       description: 'اختبارات للجزء الخامس والعشرون والجزء الثلاثون',
       parts: ['الجزء الخامس والعشرون', 'الجزء الثلاثون'],
